@@ -8,6 +8,7 @@ import compress from 'astro-compress';
 import icon from 'astro-icon';
 import tailwindcss from '@tailwindcss/vite';
 import netlify from '@astrojs/netlify';
+import preact from '@astrojs/preact';
 
 // https://astro.build/config
 export default defineConfig({
@@ -43,6 +44,7 @@ export default defineConfig({
       themeCssSelector: (theme) => (theme.name === 'one-dark-pro' ? '.dark' : ':root:not(.dark)'),
     }),
     mdx(),
+    preact(),
   ],
   adapter: netlify({
     imageCDN: false,

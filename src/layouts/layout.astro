@@ -4,7 +4,7 @@ import Footer from '@/components/footer.astro';
 import TailwindIndicator from '@/components/tailwind-indicator.astro';
 import BaseHead from '@/components/base-head.astro';
 import Snow from '@/components/snow.astro';
-import AIChat from '@/components/ai-chat.astro';
+import AIChat from '@/components/ai-chat';
 
 interface Props {
   title: string;
@@ -46,7 +46,7 @@ const { title, description, image, ogType, schema, noindex, nofollow, twitterCre
       <slot />
     </main>
     <Footer />
-    <AIChat />
+    <AIChat client:load />
     <TailwindIndicator />
   </body>
 </html>
